@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat&family=Mukta:wght@700&family=Poppins:wght@700&family=Roboto:wght@300;500&display=swap');
 body{
   font-family: Mukta;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgba(127, 255, 212, 0.405); */
 }
 .main1{
   width: 90vw;
-  border: 2px solid;
-  margin: auto;
+
   padding: 20px;
-  position: relative;
+  position:absolute;
+  left: 50px;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; */
 }
 .berk{
   display: none;
@@ -27,7 +35,7 @@ body{
   margin: 20px;
 }
 .div:hover{
-  background-color: rgb(217, 216, 216);
+  background-color: rgb(235, 231, 231);
   border: 2px solid blue;
 }
 
@@ -46,14 +54,52 @@ body{
   justify-content: center;
   transform: rotate(45deg);
 }
+
 .window{
-  overflow: scroll;
-  width: 60vw;
+  overflow-y: scroll;
+  border-radius: 20px;
+  width: 80vw;
   position: fixed;
-  left: 20vw;
+  left: 10vw;
   padding: 20px;
   text-align: center;
-  
+  height: 94vh;
   background-color: rgb(29, 202, 10);
   margin: auto;
+  z-index: 1;
+  position:fixed;
+  top: 0;
+}
+.ayah{
+  color: rgb(74, 73, 73);
+}
+.exit{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  right: 9vw;
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: white;
+}
+audio{
+  width: 40vw;
+}
+.header{
+  width: 98.9vw;
+  height: 60vh;
+  background-image: url('https://memorizequran.app/static/media/q1-min.e3d2d931.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.headerh1{
+  font-size: 100px;
 }
