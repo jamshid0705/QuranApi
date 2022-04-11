@@ -34,7 +34,7 @@ const header=document.querySelector('.header')
 }
 main1.addEventListener('click',function(e){
   let a;
-  a++
+  a++;
   if(a>1){
     
   }
