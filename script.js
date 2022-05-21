@@ -31,18 +31,16 @@ const header=document.querySelector('.header')
    
 
 }
+
 }
+let elementID;
 main1.addEventListener('click',function(e){
-  let a;
-  a++;
-  if(a>1){
-    
-  }
+  
   
   let element=e.target.closest('.div');
   console.log(element)
   if(!element) return;
-  let elementID=element.getAttribute('id');
+  elementID=element.getAttribute('id');
   console.log(elementID);
   
   
@@ -56,17 +54,45 @@ main1.addEventListener('click',function(e){
     oyna(res)
   })
 })
+// let a;
+// let arr=[];
+// const uzbek=async function(){
+//   await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/uzb-alaaudeenmansou.json`)
+// .then(function(response){
+//   return response.json();
+// })
+// .then(function(res){
+//   // console.log(res);
+//   for(let i=0;i<6000;i++){
+//     if(res.quran[i].chapter==elementID && res.quran[i].verse==i+1){
+//       a=res.quran[i].text;
+//       arr.push(a);
+//       console.log(arr)
+//     }
+//   }
+//   // console.log(arr) 
+   
+    
+  
+  
+// })
+
+// }
+// uzbek()
 
 const oyna=function(obj){
   // window1.innerHTML='';
   let html2=`<h2>${obj.data.name.transliteration.en}</h1>`
   berk1.insertAdjacentHTML('beforeend',html2)
   for(let i=0;i<(obj.data.verses).length;i++){
+    
+  
     let html1=`
     
     <h4 class="ayah">${i+1} Ayahs</h4>
     <h3>${obj.data.verses[i].text.arab}</h3>
     <h3>${obj.data.verses[i].text.transliteration.en}</h3>
+    
     <audio controls>
     <source src="${obj.data.verses[i].audio.secondary[0]}" type="audio/ogg">
     </audio>`
@@ -89,7 +115,10 @@ window1.addEventListener('click',function(e){
     document.querySelector('h3').innerHTML='';
     // window1.innerHTML='';
     window1.classList.toggle('berk')
-   
+    location.reload();
   }
 
 })
+
+
+ 
