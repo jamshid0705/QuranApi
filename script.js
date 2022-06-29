@@ -120,5 +120,3 @@ window1.addEventListener('click',function(e){
 
 })
 
-
- 
